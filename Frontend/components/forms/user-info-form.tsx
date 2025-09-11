@@ -41,7 +41,9 @@ export function UserInfoForm() {
     age: 0,
     region: "",
   });
-  const [errors, setErrors] = useState<Partial<UserInfo>>({});
+  const [errors, setErrors] = useState<Partial<Record<keyof UserInfo, string>>>(
+    {}
+  );
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const occupations = [
@@ -86,7 +88,7 @@ export function UserInfoForm() {
   ];
 
   const validateForm = (): boolean => {
-    const newErrors: Partial<UserInfo> = {};
+    const newErrors: Partial<Record<keyof UserInfo, string>> = {};
 
     if (!formData.name.trim()) {
       newErrors.name = "이름을 입력해주세요";

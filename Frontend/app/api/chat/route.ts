@@ -114,9 +114,9 @@ ${
     ? `
 - 이름: ${userInfo.name}
 - 성별: ${
-        userInfo.gender === "male"
+        userInfo.gender === "남성"
           ? "남성"
-          : userInfo.gender === "female"
+          : userInfo.gender === "여성"
           ? "여성"
           : "기타"
       }
