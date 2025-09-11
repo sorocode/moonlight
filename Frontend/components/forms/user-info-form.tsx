@@ -21,15 +21,25 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useAppStore, type UserInfo } from "@/lib/store";
-import { ArrowRight, User, Briefcase, DollarSign, Users } from "lucide-react";
+import {
+  ArrowRight,
+  User,
+  Briefcase,
+  DollarSign,
+  Users,
+  MapPin,
+  Calendar,
+} from "lucide-react";
 
 export function UserInfoForm() {
   const { setUserInfo, setCurrentPage } = useAppStore();
   const [formData, setFormData] = useState<UserInfo>({
     name: "",
     occupation: "",
-    gender: "male",
-    income: 0,
+    gender: "남성",
+    income: "",
+    age: 0,
+    region: "",
   });
   const [errors, setErrors] = useState<Partial<UserInfo>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -45,14 +55,34 @@ export function UserInfoForm() {
     "기타",
   ];
 
+  const regions = [
+    "서울",
+    "부산",
+    "대구",
+    "인천",
+    "광주",
+    "대전",
+    "울산",
+    "세종",
+    "경기",
+    "강원",
+    "충북",
+    "충남",
+    "전북",
+    "전남",
+    "경북",
+    "경남",
+    "제주",
+  ];
+
   const incomeRanges = [
-    { value: 0, label: "소득 없음" },
-    { value: 1000000, label: "100만원 미만" },
-    { value: 2000000, label: "100만원 ~ 200만원" },
-    { value: 3000000, label: "200만원 ~ 300만원" },
-    { value: 4000000, label: "300만원 ~ 400만원" },
-    { value: 5000000, label: "400만원 ~ 500만원" },
-    { value: 6000000, label: "500만원 이상" },
+    { value: "소득 없음", label: "소득 없음" },
+    { value: "100만원 이하", label: "100만원 이하" },
+    { value: "200만원 이하", label: "200만원 이하" },
+    { value: "300만원 이하", label: "300만원 이하" },
+    { value: "400만원 이하", label: "400만원 이하" },
+    { value: "500만원 이하", label: "500만원 이하" },
+    { value: "500만원 이상", label: "500만원 이상" },
   ];
 
   const validateForm = (): boolean => {
@@ -64,6 +94,18 @@ export function UserInfoForm() {
 
     if (!formData.occupation) {
       newErrors.occupation = "직업을 선택해주세요";
+    }
+
+    if (!formData.region) {
+      newErrors.region = "거주지역을 선택해주세요";
+    }
+
+    if (!formData.age || formData.age < 1) {
+      newErrors.age = "나이를 입력해주세요";
+    }
+
+    if (!formData.income) {
+      newErrors.income = "소득 범위를 선택해주세요";
     }
 
     setErrors(newErrors);
@@ -155,7 +197,7 @@ export function UserInfoForm() {
                   <Label>성별</Label>
                   <Select
                     value={formData.gender}
-                    onValueChange={(value: "male" | "female" | "other") =>
+                    onValueChange={(value: "남성" | "여성" | "기타") =>
                       setFormData((prev) => ({ ...prev, gender: value }))
                     }
                   >
@@ -163,11 +205,87 @@ export function UserInfoForm() {
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="male">남성</SelectItem>
-                      <SelectItem value="female">여성</SelectItem>
-                      <SelectItem value="other">기타</SelectItem>
+                      <SelectItem value="남성">남성</SelectItem>
+                      <SelectItem value="여성">여성</SelectItem>
+                      <SelectItem value="기타">기타</SelectItem>
                     </SelectContent>
                   </Select>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Age Input */}
+            <Card>
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-5 h-5 text-primary" />
+                  <CardTitle className="text-base">나이</CardTitle>
+                </div>
+                <CardDescription>
+                  연령별 지원 정책을 찾아드립니다
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  <Label htmlFor="age">나이</Label>
+                  <Input
+                    id="age"
+                    type="number"
+                    placeholder="25"
+                    min="1"
+                    max="120"
+                    value={formData.age || ""}
+                    onChange={(e) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        age: Number.parseInt(e.target.value) || 0,
+                      }))
+                    }
+                    className={errors.age ? "border-destructive" : ""}
+                  />
+                  {errors.age && (
+                    <p className="text-sm text-destructive">{errors.age}</p>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Region Selection */}
+            <Card>
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  <CardTitle className="text-base">거주지역</CardTitle>
+                </div>
+                <CardDescription>
+                  지역별 특화 정책을 추천해드립니다
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  <Label>거주지역</Label>
+                  <Select
+                    value={formData.region}
+                    onValueChange={(value) =>
+                      setFormData((prev) => ({ ...prev, region: value }))
+                    }
+                  >
+                    <SelectTrigger
+                      className={errors.region ? "border-destructive" : ""}
+                    >
+                      <SelectValue placeholder="거주지역을 선택해주세요" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {regions.map((region) => (
+                        <SelectItem key={region} value={region}>
+                          {region}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  {errors.region && (
+                    <p className="text-sm text-destructive">{errors.region}</p>
+                  )}
                 </div>
               </CardContent>
             </Card>
@@ -229,28 +347,27 @@ export function UserInfoForm() {
                 <div className="space-y-2">
                   <Label>월 소득 범위</Label>
                   <Select
-                    value={formData.income.toString()}
+                    value={formData.income}
                     onValueChange={(value) =>
-                      setFormData((prev) => ({
-                        ...prev,
-                        income: Number.parseInt(value),
-                      }))
+                      setFormData((prev) => ({ ...prev, income: value }))
                     }
                   >
-                    <SelectTrigger>
+                    <SelectTrigger
+                      className={errors.income ? "border-destructive" : ""}
+                    >
                       <SelectValue placeholder="소득 범위를 선택해주세요" />
                     </SelectTrigger>
                     <SelectContent>
                       {incomeRanges.map((range) => (
-                        <SelectItem
-                          key={range.value}
-                          value={range.value.toString()}
-                        >
+                        <SelectItem key={range.value} value={range.value}>
                           {range.label}
                         </SelectItem>
                       ))}
                     </SelectContent>
                   </Select>
+                  {errors.income && (
+                    <p className="text-sm text-destructive">{errors.income}</p>
+                  )}
                 </div>
               </CardContent>
             </Card>
