@@ -3,19 +3,28 @@ import { persist } from "zustand/middleware";
 
 export interface UserInfo {
   name: string;
+  gender: "남성" | "여성" | "기타";
+  region: string;
+  income: string;
+  age: number;
   occupation: string;
-  gender: "male" | "female" | "other";
-  income: number;
 }
 
 export interface WelfareRecommendation {
-  id: string;
-  title: string;
-  description: string;
-  eligibility: string[];
-  benefits: string;
-  applicationMethod: string;
-  category: string;
+  추천순위: number;
+  사업명: string;
+  설명: string;
+  주요조건: {
+    신청기한: string;
+    연령: string;
+    거주: string;
+    소득: string;
+    기타?: string;
+  };
+  신청정보: {
+    신청방법: string;
+    필요서류: string;
+  };
 }
 
 export interface ChatMessage {
