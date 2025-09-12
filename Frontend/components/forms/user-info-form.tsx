@@ -1,5 +1,6 @@
 "use client";
 
+import { welfareApi } from "@/lib/api"; 
 import type React from "react";
 
 import { useState } from "react";
@@ -38,7 +39,7 @@ export function UserInfoForm() {
     occupation: "",
     gender: "남성",
     income: "",
-    age: 0,
+    age: 25,
     region: "",
   });
   const [errors, setErrors] = useState<Partial<Record<keyof UserInfo, string>>>(
@@ -119,11 +120,22 @@ export function UserInfoForm() {
 
     if (!validateForm()) return;
 
+    const {
+    setUserInfo,
+    setLoadingRecommendations,
+    setRecommendations,
+    setCurrentPage,
+} = useAppStore.getState();
+
     setIsSubmitting(true);
+    setLoadingRecommendations(true);
 
     try {
       // Save user info to store
       setUserInfo(formData);
+
+      const newRecommendations = await welfareApi.getRecommendations(formData);
+      setRecommendations(newRecommendations);
 
       // Navigate to recommendations page
       setCurrentPage("recommendations");
@@ -131,6 +143,7 @@ export function UserInfoForm() {
       console.error("Form submission error:", error);
     } finally {
       setIsSubmitting(false);
+      setLoadingRecommendations(false);
     }
   };
 
@@ -233,7 +246,7 @@ export function UserInfoForm() {
                   <Input
                     id="age"
                     type="number"
-                    placeholder="25"
+                    //placeholder="25"
                     min="1"
                     max="120"
                     value={formData.age || ""}
