@@ -6,6 +6,8 @@ import { RecommendationsPage } from "@/components/pages/recommendations-page";
 import { ChatPage } from "@/components/pages/chat-page";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
+
 import {
   Card,
   CardContent,
@@ -129,6 +131,10 @@ function WelcomePage() {
 
 export default function App() {
   const { currentPage } = useAppStore();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, [currentPage]);
 
   const renderCurrentPage = () => {
     switch (currentPage) {
