@@ -27,6 +27,7 @@
 <a id="overview"></a>
 ## 🎯 프로젝트명: 복지찾기
 <img src="./docs/images/app-main.png" alt="앱 메인 화면" width="520"/>
+## 웹사이트 url : https://moonlight-tawny-seven.vercel.app/
 ### AI 기반 취약계층 지원사업 맞춤 추천 플랫폼  
 (앱 이름: **복지찾기**, 팀 이름: **달빛천사**)
 
