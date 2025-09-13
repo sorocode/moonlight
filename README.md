@@ -81,7 +81,7 @@
 
 <img src="./docs/images/stats-chart.png" alt="통계 그래프" width="520"/>
     
-    [경기일보, 2025-03-19 승인](https://www.kyeonggi.com/article/20250318580237)  
+  - [경기일보, 2025-03-19 승인](https://www.kyeonggi.com/article/20250318580237)  
 
 - **민간 연구(월드비전 × 연세대, 2024)**  
   - 가족돌봄 청소년 58.5%가 지원을 이용한 적 없음  
@@ -160,7 +160,7 @@
 3. **추천 생성**  
    - 동적 프롬프트 기반 LLM 호출  
    - **Top 3 지원사업**을 구조화된 정보(조건·서류·방법 등)와 함께 반환
-     ![추천 결과 화면](./docs/images/recommendations.png)
+<img src="./docs/images/recommendations.png" alt="추천 결과 화면" width="300"/>
 
 4. **결과 제공**  
    - 공고문을 **쉬운 언어**로 변환  
