@@ -102,7 +102,7 @@ function WelcomePage() {
                 몇 가지 간단한 질문에 답하시면 맞춤형 복지정책을 추천해드립니다
               </CardDescription>
             </CardHeader>
-            <CardContent className="pt-0">
+            <CardContent className="pt-0 space-y-3">
               <Button
                 onClick={() => setCurrentPage("form")}
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
@@ -110,6 +110,15 @@ function WelcomePage() {
               >
                 정보 입력하기
                 <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+              <Button
+                onClick={() => setCurrentPage("chat")}
+                variant="outline"
+                className="w-full border-primary/30 text-primary hover:bg-primary/10"
+                size="lg"
+              >
+                바로 상담받기
+                <Users className="w-4 h-4 ml-2" />
               </Button>
             </CardContent>
           </Card>
@@ -134,7 +143,7 @@ export default function App() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-}, [currentPage]);
+  }, [currentPage]);
 
   const renderCurrentPage = () => {
     switch (currentPage) {
