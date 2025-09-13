@@ -7,7 +7,7 @@ import { Suspense } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "달빛천사👼",
+  title: "복지찾기👼",
   description: "나에게 맞는 복지정책을 AI가 추천해드립니다",
 };
 
