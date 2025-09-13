@@ -43,6 +43,8 @@
   <a href="https://www.youtube.com/watch?v=MgGM9xnIyI0" target="_blank">
     <img src="./docs/images/demo-thumbnail.png" alt="시연 영상 썸네일" width="300"/>
   </a>
+  
+  영상 : https://www.youtube.com/watch?v=MgGM9xnIyI0
   > (영상을 눌러주세요.) <br/>
   > (캡션: '복지찾기' 앱의 온보딩부터 정보 입력, AI 추천 결과 확인, 챗봇 상담까지 전체 흐름을 담은 시연 영상입니다.)
 
