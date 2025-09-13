@@ -26,7 +26,7 @@
 
 <a id="overview"></a>
 ## 🎯 프로젝트명: 복지찾기
-![앱 메인 화면](./docs/images/app-main.png)
+<img src="./docs/images/app-main.png" alt="앱 메인 화면" width="520"/>
 ### AI 기반 취약계층 지원사업 맞춤 추천 플랫폼  
 (앱 이름: **복지찾기**, 팀 이름: **달빛천사**)
 
@@ -36,7 +36,9 @@
 ## 🔗 GitHub 레포지토리 및 시연 영상
 - GitHub: https://github.com/sorocode/moonlight  
 - 최종 앱 시연 영상:
-[![시연 영상](./docs/images/demo-thumbnail.png)](https://www.youtube.com/watch?v=MgGM9xnIyI0)  
+  <a href="https://www.youtube.com/watch?v=MgGM9xnIyI0" target="_blank">
+    <img src="./docs/images/demo-thumbnail.png" alt="시연 영상 썸네일" width="480"/>
+  </a>  
   > (캡션: '복지찾기' 앱의 온보딩부터 정보 입력, AI 추천 결과 확인, 챗봇 상담까지 전체 흐름을 담은 시연 영상입니다.)
 
 ---
@@ -76,7 +78,7 @@
     **43.5%**: “지원이 있는지 몰라서”  
     **20.7%**: “어디로 연락해야 할지 몰라서”  
   - 특히 **13~19세 청소년**에서 정보 접근률이 가장 낮게 나타남
-    ![통계 그래프](./docs/images/stats-chart.png)
+    <img src="./docs/images/stats-chart.png" alt="통계 그래프" width="420"/>
     [경기일보, 2025-03-19 승인](https://www.kyeonggi.com/article/20250318580237)  
 
 - **민간 연구(월드비전 × 연세대, 2024)**  
@@ -144,10 +146,10 @@
 ## 📌 주요 흐름
 
 1. **사용자 입력**  
-   - 간편 입력폼 (선택형 UI)  
-     ![간편 정보 입력 UI](./docs/images/simple-form.png)  
-   - AI 상담 챗봇 (자유 텍스트)  
-     ![AI 상담 챗봇 UI](./docs/images/chatbot.png)
+   - 간편 입력폼 (선택형 UI)
+      <img src="./docs/images/simple-form.png" alt="간편 정보 입력 UI" width="420"/>  
+   - AI 상담 챗봇 (자유 텍스트)
+     <img src="./docs/images/chatbot.png" alt="AI 상담 챗봇 UI" width="420"/>
 
 2. **정보 추출**  
    - 정규식 기반 엔티티 추출  
@@ -180,7 +182,7 @@
 
 '복지찾기'는 단순한 추천 서비스에 머무르지 않고, **대한민국 대표 디지털 포용 복지 플랫폼**으로 확장해 나갈 계획입니다.
 
-![향후 발전 로드맵](./docs/images/roadmap.png)
+<img src="./docs/images/roadmap.png" alt="향후 발전 로드맵" width="600"/>
 - **1단계 (서비스 고도화)**  
   사용자 피드백을 반영해 **추천 알고리즘을 개선**하고, 더 많은 지자체 지원사업 데이터를 확보하여 추천의 정확성과 신뢰성을 높입니다.
 
@@ -269,7 +271,7 @@
 <a id="arch"></a>
 # 📐 시스템 아키텍처
 
-![시스템 아키텍처 다이어그램](./docs/images/architecture.png)  
+<img src="./docs/images/architecture.png" alt="시스템 아키텍처 다이어그램" width="600"/>  
 > 입력 → NLU(규칙→LLM) → 추천 엔진 → 결과 제공
 
 ---
