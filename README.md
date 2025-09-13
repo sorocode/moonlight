@@ -26,8 +26,11 @@
 
 <a id="overview"></a>
 ## 🎯 프로젝트명: 복지찾기
+
 <img src="./docs/images/app-main.png" alt="앱 메인 화면" width="520"/>
-## 웹사이트 url : https://moonlight-tawny-seven.vercel.app/
+
+**웹사이트:** [https://moonlight-tawny-seven.vercel.app/](https://moonlight-tawny-seven.vercel.app/)
+
 ### AI 기반 취약계층 지원사업 맞춤 추천 플랫폼  
 (앱 이름: **복지찾기**, 팀 이름: **달빛천사**)
 
@@ -39,7 +42,8 @@
 - 최종 앱 시연 영상:
   <a href="https://www.youtube.com/watch?v=MgGM9xnIyI0" target="_blank">
     <img src="./docs/images/demo-thumbnail.png" alt="시연 영상 썸네일" width="300"/>
-  </a>  
+  </a>
+  > (영상을 눌러주세요.) <br/>
   > (캡션: '복지찾기' 앱의 온보딩부터 정보 입력, AI 추천 결과 확인, 챗봇 상담까지 전체 흐름을 담은 시연 영상입니다.)
 
 ---
