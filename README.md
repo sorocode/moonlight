@@ -1,11 +1,6 @@
 # 📃 개요
 
-<!-- Quick Nav -->
-<a id="toc"></a>
-
-<details>
-<summary><b>📌 빠른 이동 (Click to expand)</b></summary>
-
+## 📌 빠른 이동 (Table of Contents)
 - [📃 개요](#overview)
   - [🔗 GitHub 레포지토리 및 시연 영상](#links)
   - [🧾 한 줄 소개](#one-liner)
@@ -27,14 +22,12 @@
 - [📲 앱 흐름 요약](#appflow)
 - [👥 팀 & 역할](#team)
 
-</details>
-
 ---
 
 <a id="overview"></a>
 ## 🎯 프로젝트명: 복지찾기
 ### AI 기반 취약계층 지원사업 맞춤 추천 플랫폼  
-(앱 이름: **혜택찾기**, 팀 이름: **달빛천사**)
+(앱 이름: **복지찾기**, 팀 이름: **달빛천사**)
 
 ---
 
@@ -42,8 +35,8 @@
 ## 🔗 GitHub 레포지토리 및 시연 영상
 - GitHub: https://github.com/sorocode/moonlight  
 - 최종 앱 시연 영상:
-[![시연 영상](./docs/images/demo-thumbnail.png)](https://www.youtube.com/watch?v=MgGM9xnIyI0) 
-  > (캡션: '혜택찾기' 앱의 온보딩부터 정보 입력, AI 추천 결과 확인, 챗봇 상담까지 전체 흐름을 담은 시연 영상입니다.)
+[![시연 영상](./docs/images/demo-thumbnail.png)](https://www.youtube.com/watch?v=MgGM9xnIyI0)  
+  > (캡션: '복지찾기' 앱의 온보딩부터 정보 입력, AI 추천 결과 확인, 챗봇 상담까지 전체 흐름을 담은 시연 영상입니다.)
 
 ---
 
@@ -124,8 +117,7 @@
 ## 📚 참고 근거
 
 - [경기일보, 「지원사업 몰라서…‘10명 중 6명’ 도움 못 받았다 [그림자 가장이 산다④]」 (2025-03-19 승인)](https://www.kyeonggi.com/article/20250318580237)  
-- 월드비전 × 연세대학교 복지국가연구센터, 「돌봄 청소년 맞춤형 지원 체계 수립 연구」, 2024  
-- 보건복지부, 「2022년 가족돌봄 청소년 실태조사」  
+- 월드비전 × 연세대학교 복지국가연구센터, 「돌봄 청소년 맞춤형 지원 체계 수립 연구」, 2024   
 
 ---
 
@@ -214,7 +206,13 @@
 ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
 ### AI
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)  
+
+### Python (AI 추천엔진)
+![Python](https://img.shields.io/badge/python-3776AB.svg?style=for-the-badge&logo=python&logoColor=white)  
+- Google Colab 환경에서 개발  
+- 정규표현식(`re`) 기반 NLU 파이프라인  
+- OpenAI GPT API 연동 → **추천 결과(JSON) 보장 출력**  
 
 ### Deploy
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
