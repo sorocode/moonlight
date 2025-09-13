@@ -37,7 +37,7 @@
 - GitHub: https://github.com/sorocode/moonlight  
 - 최종 앱 시연 영상:
   <a href="https://www.youtube.com/watch?v=MgGM9xnIyI0" target="_blank">
-    <img src="./docs/images/demo-thumbnail.png" alt="시연 영상 썸네일" width="480"/>
+    <img src="./docs/images/demo-thumbnail.png" alt="시연 영상 썸네일" width="300"/>
   </a>  
   > (캡션: '복지찾기' 앱의 온보딩부터 정보 입력, AI 추천 결과 확인, 챗봇 상담까지 전체 흐름을 담은 시연 영상입니다.)
 
@@ -78,7 +78,9 @@
     **43.5%**: “지원이 있는지 몰라서”  
     **20.7%**: “어디로 연락해야 할지 몰라서”  
   - 특히 **13~19세 청소년**에서 정보 접근률이 가장 낮게 나타남
-    <img src="./docs/images/stats-chart.png" alt="통계 그래프" width="420"/>
+
+<img src="./docs/images/stats-chart.png" alt="통계 그래프" width="520"/>
+    
     [경기일보, 2025-03-19 승인](https://www.kyeonggi.com/article/20250318580237)  
 
 - **민간 연구(월드비전 × 연세대, 2024)**  
@@ -147,9 +149,9 @@
 
 1. **사용자 입력**  
    - 간편 입력폼 (선택형 UI)
-      <img src="./docs/images/simple-form.png" alt="간편 정보 입력 UI" width="420"/>  
+<img src="./docs/images/simple-form.png" alt="간편 정보 입력 UI" width="300"/>  
    - AI 상담 챗봇 (자유 텍스트)
-     <img src="./docs/images/chatbot.png" alt="AI 상담 챗봇 UI" width="420"/>
+<img src="./docs/images/chatbot.png" alt="AI 상담 챗봇 UI" width="300"/>
 
 2. **정보 추출**  
    - 정규식 기반 엔티티 추출  
