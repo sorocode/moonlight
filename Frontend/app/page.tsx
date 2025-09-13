@@ -44,7 +44,7 @@ function WelcomePage() {
       <header className="px-4 py-6 border-b border-border">
         <div className="max-w-md mx-auto">
           <h1 className="text-2xl font-bold text-center text-foreground">
-            달빛천사 👼
+            복지찾기 👼
           </h1>
           <p className="text-sm text-muted-foreground text-center mt-2">
             나에게 맞는 복지혜택을 찾아보세요
